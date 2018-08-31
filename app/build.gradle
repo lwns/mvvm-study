@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+
+ext.majorNumber = 0
+ext.minorNumber = 0
+ext.maintenanceNmber = 1
+
+android {
+  compileSdkVersion versions.compileSdk
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+  defaultConfig {
+    applicationId "com.study.app"
+    minSdkVersion versions.minSdk
+    targetSdkVersion versions.compileSdk
+    versionCode 1 //getCustomVersionCode("dev")
+    versionName getCustomVersionName()
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  dataBinding {
+    enabled true
+  }
+
+  applicationVariants.all { variant ->
+    variant.outputs.all { output ->
+      if (outputFileName != null && outputFileName.endsWith('.apk')) {
+
+        variant.productFlavors.each { flavor ->
+          def version = "-v" + variant.mergedFlavor.versionName
+          def time = "-${getReleaseTime()}"
+          def buildType = variant.buildType.name
+          def flavorName = flavor.name.toLowerCase();
+          variant.mergedFlavor.versionCode = getCustomVersionCode(flavorName)
+          variant.mergedFlavor.versionName = getCustomVersionName()
+
+          def newName = "object" + version + "-" + flavorName + "-" + buildType + time + "-" + buildDescription + ".apk"
+          outputFileName = new File(newName)
+        }
+      }
+    }
+  }
+}
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+  testImplementation 'junit:junit:4.12'
+
+  implementation project(':res')
+  implementation project(':data')
+
+  annotationProcessor deps.lonelysword.compiler
+  annotationProcessor deps.lonelysword.dagger
+  annotationProcessor deps.dagger.processor
+  annotationProcessor deps.dagger.compiler
+
+  androidTestImplementation 'com.android.support.test:runner:1.0.2'
+  androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+def getCustomVersionCode(String flavorName) {
+  if ("stg" == flavorName || "prod" == flavorName) {
+    ext.buildNumberCMD = 'git rev-list origin/master --count'
+    ext.buildNumber = buildNumberCMD.execute().getText().trim().toInteger()
+    ext.buildDescriptionCMD = 'git rev-parse --short origin/master'
+    ext.buildDescription = buildDescriptionCMD.execute().getText().trim()
+  } else if ("dev" == flavorName || "test" == flavorName || "uat" == flavorName) {
+    ext.buildNumberCMD = 'git rev-list origin/dev --count'
+    ext.buildNumber = buildNumberCMD.execute().getText().trim().toInteger()
+    ext.buildDescriptionCMD = 'git rev-parse --short origin/dev'
+    ext.buildDescription = buildDescriptionCMD.execute().getText().trim()
+  }
+  buildNumber
+}
+
+def getCustomVersionName() {
+  majorNumber + "." + minorNumber + "." + maintenanceNmber
+}
+
+def getReleaseTime() {
+  return new Date().format("yyyyMMdd", TimeZone.getTimeZone("GMT+8"))
+}
+

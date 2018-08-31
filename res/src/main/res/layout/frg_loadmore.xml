@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+  <data>
+    <variable
+        name="viewModel"
+        type="com.timper.res.base.loadmore.LoadMoreViewModel"
+        />
+
+    <import type="com.timper.res.bindingadapter.recyclerview.LayoutManagers"/>
+  </data>
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:colorScheme="@{viewModel.colorScheme}"
+        app:onRefresh="@{viewModel.onRefresh}"
+        app:refresh="@{viewModel.refresh}"
+        >
+
+      <FrameLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            app:itemBinding="@{viewModel.itemBinding}"
+            app:items="@{viewModel.datas}"
+            app:layoutManager="@{LayoutManagers.linear()}"
+            app:onLoadMore="@{viewModel.onLoadMore}"
+            ></android.support.v7.widget.RecyclerView>
+
+        <com.timper.res.view.EmptyLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:onRetry="@{viewModel.onRetry}"
+            app:state="@{viewModel.state}"
+            ></com.timper.res.view.EmptyLayout>
+      </FrameLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+  </FrameLayout>
+</layout>

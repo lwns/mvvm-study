@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+  <data>
+    <variable
+        name="viewModel"
+        type="com.timper.res.base.tab.TabViewModel"
+        />
+
+  </data>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      >
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/app.theme.colorPrimary"
+        app:tabSelectedTextColor="@color/app.theme.colorPrimary"
+        app:tabTextColor="@color/black"
+        tools:ignore="UnusedAttribute"
+        />
+
+    <include layout="@layout/include_line_h"/>
+
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/viewPager"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:fragments="@{view.fragments}"-->
+        <!--app:frgManager="@{view.fragmentManager}"-->
+        <!--app:pageLimit="@{viewModel.pageLimit}"-->
+        <!--app:selectPosition="@{viewModel.selectPosition}"-->
+        <!--app:titles="@{viewModel.titles}"-->
+        <!--/>-->
+
+  </LinearLayout>
+</layout>

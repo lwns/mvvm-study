@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2013 Chris Banes
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+-->
+<resources>
+  <!-- Common -->
+  <color name="transparent">#00000000</color>
+  <color name="white">#FFFFFF</color>
+  <color name="white.aphla.40">#40FFFFFF</color>
+  <color name="white.aphla.aa">#aaFFFFFF</color>
+  <color name="black">#000000</color>
+  <color name="black.aphla66">#66000000</color>
+  <color name="app.transparent">#00000000</color>
+  <color name="app.white">#FFFFFF</color>
+  <color name="app.white.aphla.40">#40FFFFFF</color>
+  <color name="app.white.aphla.aa">#aaFFFFFF</color>
+  <color name="app.black">#000000</color>
+
+  <color name="status_bar_color">#CFCFCF</color>
+
+  <color name="app.line">#d8d8d8</color>
+  <!-- Theme - Dark Blue -->
+  <color name="app.theme.background">#FFFFFF</color>
+  <color name="app.theme.background_edf1f2">#edf1f2</color>
+  <color name="app.theme.background_f3f3f3">#f3f3f3</color>
+  <color name="app.theme.background_fcfcfc">#fcfcfc</color>
+  <color name="app.theme.background_f6f6f6">#f6f6f6</color>
+  <color name="app.theme.background_e6e6e6">#e6e6e6</color>
+  <color name="app.theme.background_fafafa">#fafafa</color>
+  <color name="app.theme.background_dadada">#DADADA</color>
+  <color name="app.theme.background_ddd">#dddddd</color>
+  <color name="app.theme.background_00bebe">#00bebe</color>
+  <color name="app.theme.gradientColor">#507E9F</color>
+  <color name="app.theme.colorControlActivated">#ffffff</color>
+  <color name="app.theme.colorControlHighlight">#ffffff</color>
+
+  <color name="app.theme.colorPrimary">#24cf5f</color><!--toolbar背景顏色-->
+  <color name="app.theme.colorPrimaryDark">#24cf5f</color><!--状态栏背景顏色-->
+  <color name="app.theme.colorAccent">#24cf5f</color><!--字体顏色-->
+  <color name="app.theme.textColorPrimary">#666666</color><!--toolbar title字体顏色-->
+  <color name="app.theme.textColorSecondary">#fff</color>
+
+  <color name="app.theme.actionMode.statusBarColor">#00cccc</color>
+  <color name="app.theme.actionMode.background">#9CBDCC</color>
+
+  <!-- ImageView Control -->
+  <color name="app.image.tint">#b85671</color>
+
+  <!-- Buuton Control -->
+  <color name="app.button.background">#f6f6f6</color>
+
+  <!-- TextView Control -->
+  <color name="app.text.hint">#cccccc</color>
+  <color name="app.text">#ffffff</color>
+  <color name="app.text.black">@color/black</color>
+  <color name="app.text.white">@color/app.white</color>
+  <color name="app.text.red">#ff7333</color>
+  <color name="app.text.black6a6a6a">#6a6a6a</color>
+  <color name="app.text.blackb6b6b6">#b6b6b6</color>
+  <color name="app.text.black9d9d9d">#9d9d9d</color>
+  <color name="app.text.black333">#333333</color>
+  <color name="app.text.black666">#666</color>
+  <color name="app.text.black999">#999999</color>
+  <color name="app.text.blackCCC">#CCCCCC</color>
+  <color name="app.text.bg.yellow">#FEA501</color>
+  <color name="app.text.bg.pink">#FD7071</color>
+  <color name="app.text.bg.blue">#20C1FD</color>
+  <color name="app.text.31C5E4">#31C5E4</color>
+  <color name="app.text.5c5c5c">#5c5c5c</color>
+  <color name="app.text.pink">#fb7299</color>
+  <color name="app.text.black.normal">#555555</color>
+  <color name="app.text.black.alpha.45">#71000000</color>
+  <color name="app.text.black.alpha.66">#66000000</color>
+  <color name="app.text.black.alpha.33">#33000000</color>
+  <color name="app.text.gray.normal">#666666</color>
+  <color name="app.text.tint">#9CBDCC</color>
+
+
+  <!-- pickerview Control -->
+  <color name="pickerview_timebtn_nor">#057dff</color>
+  <color name="pickerview_timebtn_pre">#c2daf5</color>
+  <color name="pickerview_bg_topbar">#f5f5f5</color>
+  <color name="pickerview_topbar_title">#000000</color>
+  <color name="pickerview_wheelview_textcolor_out">#a8a8a8</color>
+  <color name="pickerview_wheelview_textcolor_center">#2a2a2a</color>
+  <color name="pickerview_wheelview_textcolor_divider">#d5d5d5</color>
+
+  <color name="grey_dddddd">#dddddd</color><!--通用线条颜色 -->
+  <color name="blue_00bcbc">#00bcbc</color><!--通用蓝色 -->
+
+  <color name="grey_40_454553">#64454553</color>
+  <color name="grey_e5e5e5">#e5e5e5</color>
+
+  <color name="grey_c3c3c3">#c3c3c3</color>
+  <color name="grey_50_c3c3c3">#80c3c3c3</color>
+
+  <color name="yellow_ceb79a">#ceb79a</color>
+  <color name="blue_e6fafa">#e6fafa</color>
+  <color name="black_bb000000">#bb000000</color>
+
+  <!--steward res color start-->
+  <color name="app.text.whiteffffff">#ffffff</color>
+  <color name="app.text.black333333">#333333</color>
+  <color name="app.text.black000f17">#000f17</color>
+  <color name="app.text.gray6600263c">#6600263c</color>
+  <color name="app.text.gray666666">#666666</color>
+  <color name="app.text.gray999999">#999999</color>
+  <color name="app.text.graydcdcdc">#dcdcdc</color>
+  <color name="app.theme.blue215d75">#215d75</color>
+  <color name="app.text.blue004b64">#004b64</color>
+  <color name="app.text.green00bebe">#00bebe</color>
+  <color name="app.theme.green00bcbc">#00bcbc</color>
+  <!--steward res color end-->
+
+</resources>

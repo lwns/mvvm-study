@@ -1,0 +1,468 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <style name="NoActionBar" parent="Theme.AppCompat.Light.NoActionBar"></style>
+
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="NoActionBar">
+    <!--Customize your theme here. -->
+    <item name="android:windowIsTranslucent">true</item><!--窗体透明-->
+    <item name="colorPrimary">@color/app.theme.textColorSecondary</item>
+    <item name="colorPrimaryDark">@color/app.theme.textColorSecondary</item>
+    <item name="colorAccent">@color/app.theme.textColorSecondary</item>
+
+    <item name="android:textColorPrimary">@color/app.theme.textColorPrimary</item>
+    <item name="android:textColorSecondary">@color/app.theme.textColorSecondary</item>
+
+    <item name="android:windowBackground">@color/app.theme.background</item>
+
+    <item name="colorControlNormal">@color/app.theme.textColorPrimary</item>
+    <item name="colorControlActivated">@color/app.theme.colorControlActivated</item>
+    <item name="colorControlHighlight">@color/app.theme.colorControlHighlight</item>
+
+    <item name="android:statusBarColor" tools:targetApi="lollipop">
+      @android:color/transparent
+    </item>
+
+    <!-- ActionMode -->
+    <item name="windowActionModeOverlay">true</item>
+    <item name="actionModeStyle">@style/App.Theme.ActionMode</item>
+    <item name="actionModeCloseButtonStyle">@style/App.Theme.ActionMode.CloseButton
+    </item>
+
+    <!-- AlertDialog -->
+    <item name="alertDialogTheme">@style/App.Theme.AlertDialog</item>
+
+    <!-- PopupMenu -->
+    <item name="textAppearanceLargePopupMenu">@style/App.Theme.TextAppearance.LargePopupMenu
+    </item>
+    <item name="textAppearanceSmallPopupMenu">@style/App.Theme.TextAppearance.SmallPopupMenu
+    </item>
+
+  </style>
+
+  <style name="PaymentTheme" parent="AppTheme">
+    <item name="android:splitMotionEvents">false</item>
+    <item name="android:windowEnableSplitTouch">false</item>
+  </style>
+
+  <!-- 日间模式 -->
+  <style name="App.Theme.Light" parent="AppTheme"/>
+
+  <style name="Base.App.Theme" parent="App.Theme.Light">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+  </style>
+
+  <!-- 默认动画 -->
+  <style name="AnimationActivity" parent="@android:style/Theme">
+    <item name="android:activityOpenEnterAnimation">@anim/a_to_b_of_in</item>
+    <item name="android:activityOpenExitAnimation">@anim/a_to_b_of_out</item>
+    <item name="android:activityCloseEnterAnimation">@anim/a_back_b_of_in</item>
+    <item name="android:activityCloseExitAnimation">@anim/a_back_b_of_out</item>
+  </style>
+
+  <!--<style name="activityAnim">-->
+  <!--<item name="android:activityOpenEnterAnimation">@anim/slide_in_top</item>-->
+  <!--<item name="android:activityOpenExitAnimation">@anim/slide_in_top</item>-->
+  <!--</style>-->
+
+
+  <style name="App.Theme" parent="AppTheme"/>
+
+  <!--全屏-->
+  <style name="App.Theme.Fullscreen">
+    <item name="windowNoTitle">true</item>
+    <item name="windowActionBar">false</item>
+    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+  </style>
+
+  <!-- Widget - Divider -->
+  <style name="App.Theme.Divider">
+    <item name="android:layout_width">0dp</item>
+    <item name="android:layout_height">0dp</item>
+    <item name="android:background">@color/app.line</item>
+  </style>
+
+  <style name="App.Theme.Divider.Line">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">1px</item>
+    <item name="android:background">@color/app.line</item>
+  </style>
+
+  <style name="App.Theme.Divider.Line.Vertical">
+    <item name="android:layout_height">@dimen/app.divider.line</item>
+  </style>
+
+  <style name="App.Theme.Divider.Line.Horizontal">
+    <item name="android:layout_width">@dimen/app.divider.line</item>
+  </style>
+
+
+  <style name="App.Theme.Toolbar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    <item name="colorControlNormal">@color/app.text.gray.normal</item>
+  </style>
+
+  <style name="App.Theme.ActionMode" parent="@style/Widget.AppCompat.ActionMode"><!--ActionMode 是临时占据了ActionBar的位置-->
+    <item name="background">@color/app.theme.actionMode.background</item>
+    <item name="height">?attr/actionBarSize</item>
+    <item name="backgroundSplit">@null</item>
+    <item name="titleTextStyle">@style/App.Theme.TextAppearance.ActionMode.Title</item>
+    <item name="android:tint">@color/black</item>
+  </style>
+
+  <style name="App.Theme.ActionMode.CloseButton" parent="@style/Widget.AppCompat.ActionButton.CloseMode">
+    <item name="android:tint">@color/app.theme.colorPrimary</item>
+  </style>
+
+  <style name="App.Theme.AlertDialog" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+    <item name="android:background">@color/app.theme.background</item>
+  </style>
+
+
+  <!-- TextAppearance -->
+
+  <style name="App.Theme.TextAppearance">
+    <!--<item name="fontPath">@string/app.font.roboto.monospace.regular</item>-->
+    <item name="android:textSize">16sp</item>
+    <item name="android:textColor">@color/app.theme.colorAccent</item>
+  </style>
+
+  <!-- TextAppearance mm-->
+  <style name="App.Theme.TextAppearance.mm">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">match_parent</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.mm.tiny">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:textSize">@dimen/app.text.tiny</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.mm.small">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:textSize">@dimen/app.text.small</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.mm.normal">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:textSize">@dimen/app.text.normal</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.mm.large">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:textSize">@dimen/app.text.large</item>
+  </style>
+
+  <!-- TextAppearance mw-->
+  <style name="App.Theme.TextAppearance.mw">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.mw.tiny">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textSize">@dimen/app.text.tiny</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.mw.small">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textSize">@dimen/app.text.small</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.mw.normal">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textSize">@dimen/app.text.normal</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.mw.large">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textSize">@dimen/app.text.large</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.mw.large.white">
+    <item name="android:textColor">@color/app.text.white</item>
+  </style>
+
+  <!-- TextAppearance wm-->
+  <style name="App.Theme.TextAppearance.wm">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">match_parent</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.wm.tiny">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:textSize">@dimen/app.text.tiny</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.wm.small">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:textSize">@dimen/app.text.small</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.wm.normal">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:textSize">@dimen/app.text.normal</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.wm.large">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:textSize">@dimen/app.text.large</item>
+  </style>
+
+  <!-- TextAppearance ww-->
+  <style name="App.Theme.TextAppearance.ww">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.ww.tiny">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textSize">@dimen/app.text.tiny</item>
+  </style>
+
+
+  <style name="App.Theme.TextAppearance.ww.tiny8">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textSize">@dimen/app.text.tiny8</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.ww.tiny10">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textSize">@dimen/app.text.tiny10</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.ww.small">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textSize">@dimen/app.text.small</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.ww.small.white"></style>
+
+  <style name="App.Theme.TextAppearance.ww.small.black666">
+    <item name="android:textColor">@color/app.text.black666</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.ww.small.black999">
+    <item name="android:textColor">@color/app.text.black999</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.ww.small.black333">
+    <item name="android:textColor">@color/app.text.black333</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.ww.small.blue">
+    <item name="android:textColor">@color/app.theme.colorPrimary</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.ww.normal">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textSize">@dimen/app.text.normal</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.ww.normal.white"></style>
+
+  <style name="App.Theme.TextAppearance.ww.normal.black666">
+    <item name="android:textColor">@color/app.text.black666</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.ww.normal.black">
+    <item name="android:textColor">@color/app.text.black</item>
+  </style>
+
+
+  <style name="App.Theme.TextAppearance.ww.normal.black999">
+    <item name="android:textColor">@color/app.text.black999</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.ww.normal.black333">
+    <item name="android:textColor">@color/app.text.black333</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.ww.normal.blue">
+    <item name="android:textColor">@color/app.theme.colorPrimary</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.ww.large">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textSize">@dimen/app.text.large</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.ww.large.blue">
+    <item name="android:textColor">@color/app.theme.colorPrimary</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.ww.large.white">
+    <item name="android:textColor">@color/app.text.white</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.ww.large.black">
+    <item name="android:textColor">@color/app.text.black</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.ww.xxlarge">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textSize">@dimen/app.text.xxlarge</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.ww.xxlarge.blue">
+    <item name="android:textColor">@color/app.theme.colorPrimary</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.ww.xxlarge.white">
+    <item name="android:textColor">@color/app.text.white</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.ww.xxlarge.black">
+    <item name="android:textColor">@color/app.text.black</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.Toolbar"><!--toolbar文字样式-->
+    <item name="android:textSize">18sp</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.Light.Toolbar.Title" parent="App.Theme.TextAppearance.Toolbar"><!--toolbar文字样式-->
+    <item name="android:textColor">@color/app.text.gray.normal</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.ActionMode.Title" parent="TextAppearance.AppCompat.Widget.ActionMode.Title"><!--ActionMode文字样式-->
+    <item name="android:textColor">?attr/colorPrimary</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.LargePopupMenu" parent="TextAppearance.AppCompat.Widget.PopupMenu.Large"><!--PopupMenu文字样式-->
+    <item name="android:textColor">@color/app.theme.colorPrimary</item>
+  </style>
+
+  <style name="App.Theme.TextAppearance.SmallPopupMenu" parent="TextAppearance.AppCompat.Widget.PopupMenu.Small"><!--PopupMenu文字样式-->
+    <item name="android:textColor">@color/app.theme.colorPrimary</item>
+  </style>
+
+  <!--edit style-->
+  <style name="App.Theme.Edit" parent="App.Theme.TextAppearance.ww.small.black666">
+    <item name="android:textColorHint">@color/app.text.hint</item>
+    <item name="android:background">@color/transparent</item>
+  </style>
+
+  <!--image style-->
+  <style name="App.Theme.Image">
+    <item name="android:layout_width">@dimen/app.image.height.normal58</item>
+    <item name="android:layout_height">@dimen/app.image.height.normal58</item>
+  </style>
+
+  <!--image style-->
+  <style name="App.Theme.Image.Small">
+    <item name="android:layout_width">@dimen/app.image.height.normal40</item>
+    <item name="android:layout_height">@dimen/app.image.height.normal40</item>
+  </style>
+  <!--image style-->
+  <style name="App.Theme.CheckBox">
+    <item name="colorControlActivated">@color/app.theme.colorPrimary</item>
+    <item name="colorControlNormal">@color/app.text.black999</item>
+  </style>
+
+  <!-- TextInputLayout-->
+  <style name="App.Theme.TextInputLayout" parent="TextAppearance.AppCompat">
+    <!-- 默认状态提示颜色和字体-->
+    <item name="android:textColorHint">@color/app.text.hint</item>
+    <item name="android:textSize">14sp</item>
+    <!-- 下面可以根据需要设置，如果没有将默认使用默认theme的颜色 -->
+    <!-- Label标签的颜色 -->
+    <item name="colorAccent">#c6174e</item>
+    <!-- 默认状态状态设置底线颜色 -->
+    <item name="colorControlNormal">@color/white.aphla.aa</item>
+    <!-- 选择的底线颜色 -->
+    <item name="colorControlActivated">@color/white</item>
+  </style>
+
+  <!--viewgroup style-->
+  <style name="App.Theme.Linear">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
+
+  <style name="App.Theme.Linear.ww">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
+
+  <style name="App.Theme.Relative"></style>
+
+  <!--layout style-->
+  <style name="App.Theme.Layout">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_marginBottom">@dimen/app.margin.normal</item>
+    <item name="android:layout_marginLeft">@dimen/app.margin.large12</item>
+    <item name="android:layout_marginRight">@dimen/app.margin.large12</item>
+    <item name="android:layout_marginTop">@dimen/app.margin.normal</item>
+  </style>
+
+  <!--ripple style-->
+  <style name="App.Theme.ripple"></style>
+
+  <!--Loading style-->
+  <style name="App.Theme.ripple.item">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:clickable">true</item>
+    <item name="android:padding">@dimen/app.padding.large13</item>
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:orientation">horizontal</item>
+  </style>
+
+  <style name="App.Theme.Loading">
+    <item name="minWidth">48dip</item>
+    <item name="maxWidth">48dip</item>
+    <item name="minHeight">48dip</item>
+    <item name="maxHeight">48dip</item>
+    <item name="indicatorName">LoadingIndicator</item>
+  </style>
+
+  <declare-styleable name="RoundedImageView">
+    <attr format="dimension" name="riv_corner_radius"/>
+    <attr format="dimension" name="riv_corner_radius_top_left"/>
+    <attr format="dimension" name="riv_corner_radius_top_right"/>
+    <attr format="dimension" name="riv_corner_radius_bottom_left"/>
+    <attr format="dimension" name="riv_corner_radius_bottom_right"/>
+    <attr format="dimension" name="riv_border_width"/>
+    <attr format="color" name="riv_border_color"/>
+    <attr format="boolean" name="riv_mutate_background"/>
+    <attr format="boolean" name="riv_oval"/>
+    <attr name="android:scaleType"/>
+    <attr name="riv_tile_mode">
+      <enum name="clamp" value="0"/>
+      <enum name="repeat" value="1"/>
+      <enum name="mirror" value="2"/>
+    </attr>
+    <attr name="riv_tile_mode_x">
+      <enum name="clamp" value="0"/>
+      <enum name="repeat" value="1"/>
+      <enum name="mirror" value="2"/>
+    </attr>
+    <attr name="riv_tile_mode_y">
+      <enum name="clamp" value="0"/>
+      <enum name="repeat" value="1"/>
+      <enum name="mirror" value="2"/>
+    </attr>
+  </declare-styleable>
+
+</resources>

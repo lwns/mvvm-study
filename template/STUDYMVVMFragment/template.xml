@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<template
+    description="Creates a new MVVM Fragment"
+    format="1"
+    minApi="7"
+    minBuildApi="14"
+    name="STUDY MVVM Fragment"
+    revision="1">
+
+  <category value="MVVM"/>
+  <formfactor value="Mobile"/>
+
+  <parameter
+      constraints="class|unique|nonempty"
+      default="Main"
+      help="The name of the fragment class to create"
+      id="activityClass"
+      name="Fragment Name"
+      type="string"/>
+
+  <parameter
+      constraints="class|unique|nonempty"
+      default="Main"
+      help="The name of the fragment attach to class name"
+      id="attachtoactivityClass"
+      name="attach To Activity Name"
+      type="string"/>
+
+  <parameter
+      default="false"
+      help="If true, add the ModelAdater to activity/fragment's ViewModel"
+      id="hasModelAdater"
+      name="if the activity need data,add ModelAdater"
+      type="boolean"/>
+
+  <parameter
+      constraints="package"
+      default="com.nio.so.service.steward"
+      help="class package name"
+      id="packageName"
+      name="Class Package name"
+      type="string"/>
+
+  <parameter
+      default="com.study.app"
+      help="app package name"
+      id="appPackageName"
+      name="App Package name"
+      type="string"/>
+
+
+  <globals file="globals.xml.ftl"/>
+  <execute file="recipe.xml.ftl"/>
+
+</template>  

@@ -1,0 +1,1 @@
+copy "MVVMActivity","MVVMDialog","MVVMFragment" to /Applications/Android Studio.app/Contents/plugins/android/lib/templates/activityes/ folder.

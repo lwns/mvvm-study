@@ -1,0 +1,14 @@
+<resources>
+  <string name="app_name">res</string>
+
+
+  <string name="anr_message">应用出错，即将关闭!</string>
+
+  <string name="app.empty.nonet">网络不给力</string>
+  <string name="app.empty.nonet.try">请检查设置或点击刷新进行重试</string>
+  <string name="app.empty.nonet.refresh">刷新</string>
+  <string name="app.empty.refresh.nodata">暂无</string>
+
+  <string name="app.toast.load.more">加载更多...</string>
+  <string name="app.toast.no.more.data">无更多数据</string>
+</resources>

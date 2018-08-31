@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<template
+    format="1"
+    revision="1"
+    name="STUDY MVVM Activity"
+    minApi="7"
+    minBuildApi="14"
+    description="Creates a new MVVM activity">
+
+    <category value="MVVM" />
+    <formfactor value="Mobile" />
+
+    <parameter
+        id="activityClass"
+        name="Activity Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="Main"
+        help="The name of the activity class to create" />
+
+    <parameter
+        id="isLauncher"
+        name="Launcher Activity"
+        type="boolean"
+        default="false"
+        help="If true, this activity will have a CATEGORY_LAUNCHER intent filter, making it visible in the launcher" />
+
+    <parameter
+        id="hasModelAdater"
+        name="if the activity need data,add ModelAdater"
+        type="boolean"
+        default="false"
+        help="If true, add the ModelAdater to activity/fragment's ViewModel" />
+
+    <parameter
+        id="packageName"
+        name="class package name"
+        type="string"
+        constraints="package"
+        default="com.nio.so.service.steward"
+        help="class package name" />   
+
+    <parameter
+        id="appPackageName"
+        name="app Package name"
+        type="string"
+        default="com.study.app"
+        help="app package name" />
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>  

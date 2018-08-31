@@ -1,0 +1,63 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+
+  compileSdkVersion versions.compileSdk
+
+  defaultConfig {
+    minSdkVersion versions.minSdk
+    vectorDrawables.useSupportLibrary = true
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  dataBinding {
+    enabled true
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+  lintOptions {
+    abortOnError false
+  }
+
+  repositories {
+    flatDir {
+      dirs 'libs'
+    }
+  }
+}
+dependencies {
+
+  api fileTree(dir: 'libs', include: ['*.jar'])
+
+  api deps.lonelysword.lonelysword
+  api deps.support.appcompat
+  api deps.support.recyclerview
+  api deps.support.design
+  api deps.support.cardview
+  api deps.glide.glide
+  api deps.gson.gson
+
+  api 'com.google.android.exoplayer:exoplayer:2.8.4'
+  api 'com.google.android.exoplayer:exoplayer-core:2.8.4'
+  api 'com.google.android.exoplayer:exoplayer-dash:2.8.4'
+  api 'com.google.android.exoplayer:exoplayer-ui:2.8.4'
+
+  annotationProcessor deps.glide.compiler
+}

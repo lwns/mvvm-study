@@ -1,0 +1,97 @@
+<resources>
+  <!-- Common -->
+  <dimen name="app.divider.line0.3">0.3dp</dimen>
+  <dimen name="app.divider.line0.7">0.7dp</dimen>
+  <dimen name="app.divider.line">1px</dimen>
+  <dimen name="app.divider.small">4dp</dimen>
+  <dimen name="app.divider.normal">8dp</dimen>
+  <dimen name="app.divider.large">16dp</dimen>
+  <dimen name="app.divider.xlarge">24dp</dimen>
+
+  <dimen name="app.elevation.normal">3dp</dimen>
+  <dimen name="app.elevation.xlarge">10dp</dimen>
+
+  <dimen name="app.padding.small">4dp</dimen>
+  <dimen name="app.padding.small5">5dp</dimen>
+  <dimen name="app.padding.normal">8dp</dimen>
+  <dimen name="app.padding.large13">13dp</dimen>
+  <dimen name="app.padding.large12">12dp</dimen>
+  <dimen name="app.padding.large">16.7dp</dimen>
+  <dimen name="app.padding.large18">18dp</dimen>
+  <dimen name="app.padding.large30">30dp</dimen>
+  <dimen name="app.padding.xlarge">24dp</dimen>
+  <dimen name="app.padding.xxlarge">48dp</dimen>
+  <dimen name="app.padding.xxlarge48.7">48.7dp</dimen>
+  <dimen name="app.padding.xxlarge50.3">50.3dp</dimen>
+  <dimen name="app.padding.xxxlarge57">57dp</dimen>
+  <dimen name="app.padding.xxxlarge">60dp</dimen>
+
+  <dimen name="app.margin.tiny1">1dp</dimen>
+  <dimen name="app.margin.tiny">2dp</dimen>
+  <dimen name="app.margin.small">4dp</dimen>
+  <dimen name="app.margin.small5">5dp</dimen>
+  <dimen name="app.margin.small6">6dp</dimen>
+  <dimen name="app.margin.small6.7">6.7dp</dimen>
+  <dimen name="app.margin.normal">8dp</dimen>
+  <dimen name="app.margin.large">16.7dp</dimen>
+  <dimen name="app.margin.large17">17dp</dimen>
+  <dimen name="app.margin.large17.7">17.7dp</dimen>
+  <dimen name="app.margin.large15">15dp</dimen>
+  <dimen name="app.margin.large12">12dp</dimen>
+  <dimen name="app.margin.large13">13dp</dimen>
+  <dimen name="app.margin.xlarge23">23dp</dimen>
+  <dimen name="app.margin.xlarge23.7">23.7dp</dimen>
+  <dimen name="app.margin.xlarge">24dp</dimen>
+  <dimen name="app.margin.xlarge21.3">21.3dp</dimen>
+  <dimen name="app.margin.xlarge26">26dp</dimen>
+  <dimen name="app.margin.xlarge26.7">26.7dp</dimen>
+  <dimen name="app.margin.xlarge33.3">33.3dp</dimen>
+  <dimen name="app.margin.xxlarge">48dp</dimen>
+  <dimen name="app.margin.xxlarge48.3">48.3dp</dimen>
+  <dimen name="app.margin.xxxlarge">60dp</dimen>
+  <dimen name="app.margin.xxxlarge73.3">73.3dp</dimen>
+
+  <dimen name="app.navigation.edit.minwidth">106.7dp</dimen>
+  <dimen name="app.navigation.width">280dp</dimen>
+  <dimen name="app.navigation.title.minwidth">56dp</dimen>
+  <dimen name="app.navigation.head.height">200dp</dimen>
+  <dimen name="app.navigation.dialog.call.height">179.3dp</dimen>
+
+  <dimen name="app.cardview.corner.radius.normal">2dp</dimen>
+  <dimen name="app.cardview.elevation.normal">4dp</dimen>
+  <dimen name="app.cardview.height.normal">190dp</dimen>
+
+  <dimen name="app.banner.height.normal">126dp</dimen>
+
+  <dimen name="app.image.width.normal12.7">12.7dp</dimen>
+  <dimen name="app.image.width.normal40">40dp</dimen>
+  <dimen name="app.image.height.normal40">40dp</dimen>
+  <dimen name="app.image.width.normal">50dp</dimen>
+  <dimen name="app.image.height.normal">50dp</dimen>
+  <dimen name="app.image.width.normal58">58dp</dimen>
+  <dimen name="app.image.height.normal58">58dp</dimen>
+  <dimen name="app.image.width.small">20dp</dimen>
+  <dimen name="app.image.height.small">20dp</dimen>
+  <dimen name="app.image.height.xxlarge">120dp</dimen>
+  <dimen name="app.image.height.xxlarge.140">140dp</dimen>
+
+  <dimen name="app.text.tiny4">4sp</dimen>
+  <dimen name="app.text.tiny8">8sp</dimen>
+  <dimen name="app.text.tiny10">10sp</dimen>
+  <dimen name="app.text.tiny">12sp</dimen>
+  <dimen name="app.text.small">14sp</dimen>
+  <dimen name="app.text.small14.7">14.7sp</dimen>
+  <dimen name="app.text.normal">16sp</dimen>
+  <dimen name="app.text.normal16.7">16.7sp</dimen>
+  <dimen name="app.text.large">18sp</dimen>
+  <dimen name="app.text.xlarge">20sp</dimen>
+  <dimen name="app.text.xxlarge">22sp</dimen>
+  <dimen name="app.text.xxxlarge">24sp</dimen>x
+  <dimen name="app.text.large26">26.7sp</dimen>
+  <dimen name="app.text.height.normal">50dp</dimen>
+
+  <dimen name="app.text.list.title">14sp</dimen>
+  <dimen name="app.text.list.hint">12sp</dimen>
+  <dimen name="app.text.hint">12sp</dimen>
+
+</resources>

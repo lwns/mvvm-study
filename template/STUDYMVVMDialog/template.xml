@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<template
+    description="Creates a new MVVM Dialog"
+    format="1"
+    minApi="7"
+    minBuildApi="14"
+    name="STUDY MVVM Dialog"
+    revision="1">
+
+  <category value="MVVM"/>
+  <formfactor value="Mobile"/>
+
+  <parameter
+      constraints="class|unique|nonempty"
+      default="Main"
+      help="The name of the Dialog class to create"
+      id="activityClass"
+      name="Dialog Name"
+      type="string"/>
+
+  <parameter
+      constraints="package"
+      default="com.niohouse.pay.feature"
+      help="class package name"
+      id="packageName"
+      name="Class Package name"
+      type="string"/>
+
+  <parameter
+      default="com.nio.so.service.steward"
+      help="app package name"
+      id="appPackageName"
+      name="App Package name"
+      type="string"/>
+
+
+  <parameter
+      default="com.nio.so.service.steward"
+      help="app package name"
+      id="application"
+      name="app Package name"
+      type="string"/>
+
+  <globals file="globals.xml.ftl"/>
+  <execute file="recipe.xml.ftl"/>
+
+</template>  
